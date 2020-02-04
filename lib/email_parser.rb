@@ -1,5 +1,3 @@
-require 'pry'
-
 class EmailAddressParser
   attr_accessor :email
 
@@ -9,7 +7,6 @@ class EmailAddressParser
 
   def parse
     email_parse = email.split.collect do |email|
-      binding.pry
       email.split(",")
     end
     return_emails = email_parse.flatten.uniq
